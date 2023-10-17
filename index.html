@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/069ddac36c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <button onclick="openForm()">Click</button>
+
+    <div class="popup-wrapper">
+        <div class="new-task-backdrop glass"></div>
+        <div class="flex-col new-task-popup-form">
+            <div class="flex-row form-close" onclick="closeForm()">
+                <i class="icon fa-solid fa-xmark"></i>
+            </div>
+            <div class="flex-row new-task-header">
+                <h2>Add Task</h2>
+            </div>
+            <form method="POST" id="newTaskForm">
+                <div class="flex-col task-form-container">
+                    <div class="flex-col title">
+                        <label for="title">Title</label>
+                        <input type="text" />
+                    </div>
+                    <div class="flex-col time">
+                        <div class="flex-row">
+                            <label for="time">Include Time</label>
+                            <label class="checkBox">
+                                <input id="ch1" type="checkbox">
+                                <div class="transition"></div>
+                            </label>
+                        </div>
+                        <input type="time" />
+                    </div>
+                    <div class="flex-col description">
+                        <label for="description">Description</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
